@@ -1,0 +1,57 @@
+[
+  {
+    "name": "snapshot_uses_only_data_released_by_as_of",
+    "passed": true,
+    "detail": "as_of=2026-11-06 14:00:00-05:00; violations=[]"
+  },
+  {
+    "name": "every_historical_signal_uses_only_data_released_by_its_clock",
+    "passed": true,
+    "detail": "violations=0"
+  },
+  {
+    "name": "features_exclude_politics_valuation_and_market_returns",
+    "passed": true,
+    "detail": "features=['unrate_level', 'unrate_chg_6m', 'payroll_growth_3m', 'payroll_growth_6m', 'cpi_yoy', 'core_cpi_yoy', 'core_cpi_6m_ann', 'ffr_level', 'ffr_chg_6m']"
+  },
+  {
+    "name": "weights_sum_to_one",
+    "passed": true,
+    "detail": "{'employment': 0.4, 'inflation': 0.3, 'policy': 0.3}"
+  },
+  {
+    "name": "no_missing_values_in_candidate_features",
+    "passed": true,
+    "detail": "813 candidates"
+  },
+  {
+    "name": "distance_decomposes_into_group_distances",
+    "passed": true,
+    "detail": "D == sum_g w_g * D_g"
+  },
+  {
+    "name": "top_picks_respect_min_gap",
+    "passed": true,
+    "detail": "min pairwise gap=19 months (required 18)"
+  },
+  {
+    "name": "raw_top_list_has_no_dedup",
+    "passed": true,
+    "detail": ""
+  },
+  {
+    "name": "all_candidate_outcomes_fully_realised",
+    "passed": true,
+    "detail": "last price 2026-11-06"
+  },
+  {
+    "name": "candidates_are_not_hardcoded_periods",
+    "passed": true,
+    "detail": "813 month-end signals scanned: 1958-02 to 2025-10"
+  },
+  {
+    "name": "latest_candidate_precedes_current_signal",
+    "passed": true,
+    "detail": "latest candidate 2025-10"
+  }
+]

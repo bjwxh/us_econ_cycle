@@ -1,0 +1,9 @@
+data/
+refs/
+outputs/
+tmp/
+*.zip
+__pycache__/
+.pytest_cache/
+.DS_Store
+docs/PROJECT_STATE.md

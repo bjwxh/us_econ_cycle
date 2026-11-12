@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Which past periods look most like the US economy today? Filter 10 historical analogs and see what the S&P 500 did next.">
+<meta name="theme-color" content="#061128">
+<title>US Economic Cycle Analogs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-row">
+    <a class="brand" href="#view=intro" id="brand">US Economic Cycle <b>Analogs</b></a>
+    <button id="lang" class="pill-btn" aria-label="Switch language">中文</button>
+  </div>
+  <nav class="main-tabs" id="maintabs"></nav>
+</header>
+
+<main id="app"></main>
+
+<div id="bar" class="bar" hidden>
+  <div class="bar-in">
+    <div id="barcount" class="barcount"></div>
+    <button id="barbtn" class="primary"></button>
+  </div>
+</div>
+<div id="tip" class="tip" hidden></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

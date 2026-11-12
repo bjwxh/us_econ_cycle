@@ -1,0 +1,142 @@
+{
+  "generated_at_utc": "2026-11-06 21:03:56.229913+00:00",
+  "data_mode": "REVISED data (latest FRED values) with rule-based release times; NOT point-in-time",
+  "as_of": "2026-11-06 14:00:00-05:00",
+  "parameters": {
+    "as_of": "2026-11-06T14:00:00-05:00",
+    "horizon_months": 12,
+    "top_k": 5,
+    "raw_top_n": 20,
+    "min_gap_months": 18,
+    "weights": {
+      "employment": 0.4,
+      "inflation": 0.3,
+      "policy": 0.3
+    },
+    "groups": {
+      "employment": [
+        "unrate_level",
+        "unrate_chg_6m",
+        "payroll_growth_3m",
+        "payroll_growth_6m"
+      ],
+      "inflation": [
+        "cpi_yoy",
+        "core_cpi_yoy",
+        "core_cpi_6m_ann"
+      ],
+      "policy": [
+        "ffr_level",
+        "ffr_chg_6m"
+      ]
+    },
+    "scaling": "robust",
+    "zlb_threshold_pct": 0.3,
+    "release_rules": {
+      "PAYEMS": "first_friday_next_month_0830",
+      "UNRATE": "first_friday_next_month_0830",
+      "CPIAUCSL": "day15_next_month_0830",
+      "CPILFESL": "day15_next_month_0830",
+      "DFF": "next_day_0900"
+    }
+  },
+  "python": "3.10.14",
+  "platform": "macOS-26.7.1-x86_64-i386-64bit",
+  "git_commit": "not available (not a git repository)",
+  "packages": {
+    "pandas": "2.2.1",
+    "numpy": "1.24.3",
+    "matplotlib": "3.8.4",
+    "yfinance": "0.2.58"
+  },
+  "candidates": {
+    "n": 813,
+    "first": "1958-02-01",
+    "last": "2025-10-01"
+  },
+  "sources": [
+    {
+      "series_id": "PAYEMS",
+      "provider": "FRED (St. Louis Fed), latest revised values",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PAYEMS",
+      "downloaded_at_utc": "2026-11-06 21:01:53+00:00",
+      "file": "FRED_PAYEMS_20261106T210153Z.csv",
+      "rows": 1054,
+      "non_missing": 1054,
+      "first_obs": "1939-01-01",
+      "last_obs": "2026-10-01",
+      "unit": "thousands of persons",
+      "seasonal_adjustment": "SA",
+      "frequency": "monthly"
+    },
+    {
+      "series_id": "UNRATE",
+      "provider": "FRED (St. Louis Fed), latest revised values",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE",
+      "downloaded_at_utc": "2026-11-06 21:01:54+00:00",
+      "file": "FRED_UNRATE_20261106T210154Z.csv",
+      "rows": 946,
+      "non_missing": 945,
+      "first_obs": "1948-01-01",
+      "last_obs": "2026-10-01",
+      "unit": "percent",
+      "seasonal_adjustment": "SA",
+      "frequency": "monthly"
+    },
+    {
+      "series_id": "CPIAUCSL",
+      "provider": "FRED (St. Louis Fed), latest revised values",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL",
+      "downloaded_at_utc": "2026-11-06 21:01:54+00:00",
+      "file": "FRED_CPIAUCSL_20261106T210154Z.csv",
+      "rows": 957,
+      "non_missing": 956,
+      "first_obs": "1947-01-01",
+      "last_obs": "2026-09-01",
+      "unit": "index 1982-84=100",
+      "seasonal_adjustment": "SA",
+      "frequency": "monthly"
+    },
+    {
+      "series_id": "CPILFESL",
+      "provider": "FRED (St. Louis Fed), latest revised values",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPILFESL",
+      "downloaded_at_utc": "2026-11-06 21:01:54+00:00",
+      "file": "FRED_CPILFESL_20261106T210154Z.csv",
+      "rows": 837,
+      "non_missing": 836,
+      "first_obs": "1957-01-01",
+      "last_obs": "2026-09-01",
+      "unit": "index 1982-84=100",
+      "seasonal_adjustment": "SA",
+      "frequency": "monthly"
+    },
+    {
+      "series_id": "DFF",
+      "provider": "FRED (St. Louis Fed), latest revised values",
+      "source_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFF",
+      "downloaded_at_utc": "2026-11-06 21:01:54+00:00",
+      "file": "FRED_DFF_20261106T210154Z.csv",
+      "rows": 26425,
+      "non_missing": 26425,
+      "first_obs": "1954-07-01",
+      "last_obs": "2026-11-04",
+      "unit": "percent",
+      "seasonal_adjustment": "NSA",
+      "frequency": "daily"
+    },
+    {
+      "series_id": "^GSPC",
+      "provider": "Yahoo Finance via yfinance (unofficial; price index, no dividends)",
+      "source_url": "https://finance.yahoo.com/quote/%5EGSPC/history",
+      "downloaded_at_utc": "2026-11-06 21:01:54+00:00",
+      "file": "YAHOO_GSPC_20261106T210154Z.csv",
+      "rows": 19335,
+      "first_obs": "1950-01-03",
+      "last_obs": "2026-11-06",
+      "unit": "index points",
+      "seasonal_adjustment": "n/a",
+      "frequency": "daily"
+    }
+  ]
+}
